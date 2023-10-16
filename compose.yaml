@@ -1,0 +1,13 @@
+services:
+  server:
+    image: futurehome-homekit-bridge:latest
+    container_name: futurehome-homekit-bridge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    network_mode: host
+
+
+
