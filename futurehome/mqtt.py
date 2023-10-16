@@ -11,7 +11,7 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, msg):
     if msg.topic.endswith("discover_devices"):
-        dd.store_devices(msg.payload)
+        dd.store_devices(msg.payload, client)
     else:
         bridge_logger.info(f"Received message on topic {msg.topic}")
         bridge_logger.debug(f"Message payload: {msg.payload}")
