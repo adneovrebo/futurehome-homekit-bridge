@@ -13,9 +13,16 @@ Integration for automatic bridging of devices connected to Futurehome hub to App
     `pip install -r requirements.txt`
 4. Create a `.env` file in the root of the project with the variables shown in `.env.example`
     - Tips: To find the ip of the hub use an app such as [Fing](https://www.fing.com/products/fing-app)
-5. Run the bridge via `python3 main.py` or with docker via e.g.`docker-compose up`. Tips use the `-d` or `--debug` flag to see detailed debug logs (Last 1 MB of logs is stored in `bridge.log`).
+5. Run the bridge via `python3 bridge.py`. Tips use the `-d` or `--debug` flag to see detailed debug logs (Last 1 MB of logs is stored in `bridge.log`).
 6. Add the bridge to HomeKit by scanning the QR code or entering the pin code.
 7. Enjoy your devices in HomeKit!
+
+### Simpler docker alternative
+Set the environment variables in the `.env` file and run the following command:
+```
+docker compose up -d
+```
+
 
 ## Supported accessories
 The supported devices implementations can be located in the `devices` directory.
